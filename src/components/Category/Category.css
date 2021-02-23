@@ -1,0 +1,69 @@
+:root {
+  --green: rgb(133, 255, 128);
+  --blue: rgb(163, 215, 255);
+  --purple: rgb(133, 138, 255);
+  --yellow: rgb(224, 226, 119);
+}
+
+.Category-title {
+  color: white;
+  font-weight: bold;
+}
+
+.Category-list {
+  list-style-position: inside;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.Category-list > li {
+  margin: 0.2rem;
+}
+.Category-list li {
+  width: max-content;
+}
+
+.Category-list > li:nth-child(5n + 1) .Category-link {
+  background-color: var(--brand-color_1);
+  color: black;
+}
+.Category-list > li:nth-child(5n + 2) .Category-link {
+  background-color: var(--brand-color_2);
+  color: black;
+}
+.Category-list > li:nth-child(5n + 3) .Category-link,
+.Category-list > li:nth-child(5n + 4) .Category-link {
+  background-color: var(--brand-color_3);
+  color: white;
+}
+.Category-list > li:nth-child(5n + 5) .Category-link {
+  background-color: var(--brand-color_5);
+  color: black;
+}
+
+.Category-link {
+  color: white;
+  font-size: 1em;
+  transition: color ease-in 0.1s;
+  padding: 1px 8px;
+}
+
+.Category-link:hover {
+  color: #8c55a2;
+}
+
+@media screen and (min-width: 640px) {
+  .Category-list {
+    display: list-item;
+  }
+
+  .Category-list > li {
+    margin: 0.5rem;
+  }
+
+  .Category-list li::before {
+    color: #8c55a2;
+    margin-right: 0.5em;
+    font-size: 1em;
+  }
+}
